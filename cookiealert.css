@@ -7,7 +7,7 @@
     z-index: 999;
     opacity: 0;
     border-radius: 0;
-    background: #212327 url("cubes.png");
+    background: rgba(64, 64, 64, 0.9);
     transform: translateY(100%);
     transition: all 500ms ease-out;
     color: #ecf0f1;
@@ -26,4 +26,9 @@
 .cookiealert .acceptcookies {
     margin-left: 10px;
     vertical-align: baseline;
+    font-size: 0.625rem;
+    padding: 0.625rem 0.75rem 0.5rem;
+    background-color: #97bd51 !important;
+    color: #ffffff;
+    letter-spacing: 0.093rem;
 }
