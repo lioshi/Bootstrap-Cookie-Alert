@@ -10,7 +10,8 @@
     background: rgba(64, 64, 64, 0.9);
     transform: translateY(100%);
     transition: all 500ms ease-out;
-    color: #ecf0f1;
+    color: #f2f3ed;
+    font-weight: normal;
 }
 
 .cookiealert.show {
@@ -27,7 +28,7 @@
     margin-left: 10px;
     vertical-align: baseline;
     font-size: 0.625rem;
-    padding: 0.625rem 0.75rem 0.5rem;
+    padding: 0.5em 1em 0.3em;
     background-color: #97bd51 !important;
     color: #ffffff;
     letter-spacing: 0.093rem;
