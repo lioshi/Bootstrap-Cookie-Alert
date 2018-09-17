@@ -4,16 +4,18 @@
     var cookieAlert = document.querySelector(".cookiealert");
     var acceptCookies = document.querySelector(".acceptcookies");
 
-    cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)
+    if(cookieAlert){
+        cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)
 
-    if (!getCookie("acceptCookies")) {
-        cookieAlert.classList.add("show");
+        if (!getCookie("acceptCookies")) {
+            cookieAlert.classList.add("show");
+        }
+
+        acceptCookies.addEventListener("click", function () {
+            setCookie("acceptCookies", true, 60);
+            cookieAlert.classList.remove("show");
+        });
     }
-
-    acceptCookies.addEventListener("click", function () {
-        setCookie("acceptCookies", true, 60);
-        cookieAlert.classList.remove("show");
-    });
 })();
 
 // Cookie functions stolen from w3schools
