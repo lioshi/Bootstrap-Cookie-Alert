@@ -33,3 +33,13 @@
     color: #ffffff;
     letter-spacing: 0.093rem;
 }
+
+.cookiealert .noacceptcookies {
+    margin-left: 10px;
+    vertical-align: baseline;
+    font-size: 0.625rem;
+    padding: 0.5em 1em 0.3em;
+    background-color: #ef5350 !important;
+    color: #ffffff;
+    letter-spacing: 0.093rem;
+}
