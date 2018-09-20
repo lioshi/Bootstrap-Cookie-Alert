@@ -14,6 +14,13 @@
     font-weight: normal;
 }
 
+.cookiealert.alwaysshow {
+    transform: none;
+    opacity: 1;
+    position: relative;
+    margin: 1em 0 !important;
+}
+
 .cookiealert.show {
     opacity: 1;
     transform: translateY(0%);

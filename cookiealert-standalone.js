@@ -3,10 +3,26 @@
 
     var cookieAlert = document.querySelector(".cookiealert");
     var acceptCookies = document.querySelector(".acceptcookies");
+    var cookieAlertAlwaysShowElement = document.querySelector(".cookiealert.alwaysshow");
+    if(typeof cookieAlertAlwaysShowElement == "undefined"){
+        var cookieAlertAlwaysShow = false
+    } else {
+        var cookieAlertAlwaysShow = true
+    }
     var noacceptCookies = document.querySelector(".noacceptcookies");
 
     if(cookieAlert){
         cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)
+
+        if(cookieAlertAlwaysShow){
+            if(getCookie("acceptCookies")=='true'){
+                // display new phrase: vous avez accepté les cookie...
+                // bouton refuser
+            } else {
+                // display new phrase: vous avez refusé les cookie...
+                // bouton accepter
+            }
+        }
 
         if (!getCookie("acceptCookies")) {
             cookieAlert.classList.add("show");
@@ -14,12 +30,12 @@
 
         acceptCookies.addEventListener("click", function () {
             setCookie("acceptCookies", true, 60);
-            cookieAlert.classList.remove("show");
+            if(!cookieAlertAlwaysShow) cookieAlert.classList.remove("show");
         });
 
         noacceptCookies.addEventListener("click", function () {
             setCookie("acceptCookies", false, 60);
-            cookieAlert.classList.remove("show");
+            if(!cookieAlertAlwaysShow) cookieAlert.classList.remove("show");
         });
     }
 })();
