@@ -15,12 +15,22 @@
         cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)
 
         if(cookieAlertAlwaysShow){
-            if(getCookie("acceptCookies")=='true'){
-                // display new phrase: vous avez accepté les cookie...
-                // bouton refuser
+            if(!getCookie("acceptCookies")){
+
             } else {
-                // display new phrase: vous avez refusé les cookie...
-                // bouton accepter
+                if(getCookie("acceptCookies")=='true'){
+                    // display new phrase: vous avez accepté les cookie...
+                    $('#cookietext').html('')
+                    // bouton refuser
+                    $('button.acceptcookies').show()
+                    $('button.noacceptcookies').hide()
+                } else {
+                    // display new phrase: vous avez refusé les cookie...
+                    $('#cookietext').html('')
+                    // bouton accepter
+                    $('button.acceptcookies').hide()
+                    $('button.noacceptcookies').show()
+                }
             }
         }
 
