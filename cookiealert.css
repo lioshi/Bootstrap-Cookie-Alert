@@ -21,6 +21,11 @@
     margin: 1em 0 !important;
 }
 
+.cookiealert.alwaysshow #cookietext {
+    display: block;
+    margin-bottom: 1em;
+}
+
 .cookiealert.show {
     opacity: 1;
     transform: translateY(0%);
@@ -49,4 +54,15 @@
     background-color: #ef5350 !important;
     color: #ffffff;
     letter-spacing: 0.093rem;
+}
+
+.cookiealert .noacceptcookies.done, .cookiealert .acceptcookies.done {
+    background-color: transparent !important;
+    color: #f2f3ed;
+    opacity: 1;
+    box-shadow: none;
+    font-size: 1em;
+    text-transform: initial !important;
+    letter-spacing: 0;
+    cursor: default;
 }
