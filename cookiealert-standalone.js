@@ -4,7 +4,7 @@
     var cookieAlert = document.querySelector(".cookiealert");
     var acceptCookies = document.querySelector(".acceptcookies");
     var cookieAlertAlwaysShowElement = document.querySelector(".cookiealert.alwaysshow");
-    if(typeof cookieAlertAlwaysShowElement == "undefined"){
+    if(cookieAlertAlwaysShowElement == null){
         var cookieAlertAlwaysShow = false
     } else {
         var cookieAlertAlwaysShow = true
